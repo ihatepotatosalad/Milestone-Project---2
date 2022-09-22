@@ -1,25 +1,85 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom'
+import Berries from './components/Berries';
+import Contests from './components/Contests';
+import Encounters from './components/Encounters';
+import Evolution from './components/Evolution';
+import Games from './components/Games';
+import Items from './components/Items';
+import Locations from './components/Locations';
+import Machines from './components/Machines';
+import Moves from './components/Moves';
+import Pokemon from './components/Pokemon';
+import Home from './components/Home';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+
+
+      <div className="navBar">
+        <ul>
+          <li>
+            <Link to='/'>Home</Link>
+
+          </li>
+          <li>
+            <Link to='/Berries'>Berries</Link>
+          </li>
+          <li>
+            <Link to='/Contests'>Contests</Link>
+          </li>
+          <li>
+            <Link to='/Encounters'>Encounters</Link>
+          </li>
+          <li>
+            <Link to='/Evolution'>Evolution</Link>
+          </li>
+          <li>
+            <Link to='/Games'>Games</Link>
+          </li>
+          <li>
+            <Link to='/Items'>Items</Link>
+          </li>
+          <li>
+            <Link to='/Locations'>Locations</Link>
+          </li>
+          <li>
+            <Link to='/Machines'>Machines</Link>
+          </li>
+          <li>
+            <Link to='/Moves'>Moves</Link>
+          </li>
+          <li>
+            <Link to='/Pokemon'>Pokemon</Link>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/Berries' element={<Berries />} />
+          <Route path='/Contests' element={<Contests />} />
+          <Route path='Encounters' element={<Encounters />} />
+          <Route path='/Evolution' element={<Evolution />} />
+          <Route path='/Games' element={<Games />} />
+          <Route path='Items' element={<Items />} />
+          <Route path='/Locations' element={<Locations />} />
+          <Route path='/Machines' element={<Machines />} />
+          <Route path='Moves' element={<Moves />} />
+          <Route path='/Pokemon' element={<Pokemon />} />
+
+        </Routes>
+      </div>
+      <div>
+
+      </div>
+    </Router>
+
+
+  )
 }
 
 export default App;
