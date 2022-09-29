@@ -10,7 +10,7 @@ function App() {
   const [dataIndex, setDataIndex] = useState([])
   //
   useEffect(() => {
-    fetch('http://localhost:3000/PokeInfo').then(
+    fetch(`http://localhost:3000/PokeInfo/${search}`).then(
       response => response.json()
     ).then(
       data => {
@@ -24,7 +24,7 @@ function App() {
 
       }
     )
-  }, [])
+  }, [search])
   const handleSearch = (e, term) => {
     e.preventDefault()
     setSearch(term)
@@ -44,19 +44,19 @@ function App() {
           <Card.Title>{search}</Card.Title>
 
           <Card.Text>
-            {/* {(BackendData.pokedex_number === 'undefined') ? (
+            {(BackendData.pokedex_number === 'undefined') ? (
               <span>loading</span>
-            ) : ( */}
+            ) : (
 
 
-            <div>
+              <div>
 
-              Height: {BackendData.height}<br />
-              ID: {BackendData[1].pokedex_number}<br />
-              Weight: {BackendData.weight}<br />
-            </div>
+                Height: {BackendData.height}<br />
+                ID: {BackendData.pokedex_number}<br />
+                Weight: {BackendData.weight}<br />
+              </div>
 
-
+            )}
             {/* Types: {data.types?.map((item, i) => <li key={i}>{item?.type?.name}</li>)} */}
           </Card.Text>
 

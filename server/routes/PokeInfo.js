@@ -13,8 +13,10 @@ router.get('/', async (req, res) => {
     }
 })
 //get one
-router.get('/:id', getPokemon, (req, res) => {
+router.get('/:id', getPokemon, async (req, res) => {
+
     res.json(res.pokemon)
+
 })
 //create
 
@@ -60,7 +62,7 @@ router.delete('/:id', getPokemon, async (req, res) => {
 async function getPokemon(req, res, next) {
     let pokemon
     try {
-        pokemon = await Pokemon.findById(req.params.id)
+        pokemon = await Pokemon.findOne({ name: req.params.id })
         if (pokemon == null) {
             return res.status(404).json({ message: 'cant find' })
         }
