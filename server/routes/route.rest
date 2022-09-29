@@ -1,0 +1,25 @@
+GET http://localhost:3000/PokeInfo
+
+###
+
+GET http://localhost:3000/PokeInfo/6332573f1cd35c48ca5beecd
+
+###
+POST http://localhost:3000/PokeInfo
+Content-Type: application/json
+
+{
+    "name": "pikachu",
+    "id" : 25
+}
+
+###
+DELETE http://localhost:3000/PokeInfo/63325201f4d6adf2b57e0da8
+
+###
+PATCH http://localhost:3000/PokeInfo/6332573f1cd35c48ca5beecd
+Content-Type: application/json
+
+{
+    "name":"charmander"
+}
