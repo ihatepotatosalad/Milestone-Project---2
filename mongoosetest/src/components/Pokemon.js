@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import SearchBar from './SearchBar';
 import Card from 'react-bootstrap/Card';
-import img from '../'
+import starSelect from '../Images/star.png'
+import star from '../Images/starselect.png'
 export default function Pokemon() {
     const [search, setSearch] = useState('Pikachu')
     const [BackendData, setBackendData] = useState({})
     const [imgNum, setImgNum] = useState(25)
     const [number, setNumber] = useState(25)
+    const [isSelected, setIsSelected] = useState(false)
     //
     useEffect(() => {
         fetch(`http://localhost:3000/PokeInfo/${search}`).then(
@@ -50,12 +52,20 @@ export default function Pokemon() {
         e.preventDefault()
         setSearch(term)
     }
+    const handlePost = () => {
+        if (!isSelected) {
+            setIsSelected(true)
+        } else if (isSelected) {
+            setIsSelected(false)
+        }
+
+    }
     return (
         <div className="App">
             <h1>hello world</h1>
             <SearchBar handleSearch={handleSearch} />
             <Card style={{ width: '18rem', border: '1px solid red' }}>
-                {/* <Card.Img style={{ border: '1px solid red' }} variant="top" src={data.sprites?.front_default} alt={data.name} /> */}
+                {isSelected ? <img src={star} height="50" onClick={handlePost} /> : <img src={starSelect} height="50" onClick={handlePost} />}
                 <Card.Body>
                     <Card.Title>{search}</Card.Title>
 
@@ -81,6 +91,7 @@ export default function Pokemon() {
 
                 </Card.Body>
             </Card>
+
         </div>
     )
 }

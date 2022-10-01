@@ -9,7 +9,7 @@ app.use(
         origin: "http://localhost:3001"
     }))
 
-mongoose.connect(process.env.DATABASE_URL)
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('open', (error) => console.log('connected to database'))
@@ -19,5 +19,7 @@ app.use(express.json())
 
 const pokeInfoRouter = require('./routes/PokeInfo')
 app.use('/PokeInfo', pokeInfoRouter)
+const favoritesRouter = require('./routes/Favorites')
+app.use('/Favorites', favoritesRouter)
 
 app.listen(3000, () => console.log('server Started'))
