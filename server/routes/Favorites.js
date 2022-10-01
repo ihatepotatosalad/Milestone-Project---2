@@ -22,7 +22,17 @@ router.get('/:id', getPokemon, async (req, res) => {
 //create
 
 router.post('/', async (req, res) => {
+    const favorite = new Favorites({
+        name: req.body.name,
+        id: req.body.id
 
+    })
+    try {
+        const newFavorite = await favorite.save()
+        res.status(201).json(newFavorite)
+    } catch (err) {
+        res.status(400).json({ message: err.message })
+    }
 })
 //update
 

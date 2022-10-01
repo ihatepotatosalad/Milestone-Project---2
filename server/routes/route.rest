@@ -5,7 +5,7 @@ GET http://localhost:3000/PokeInfo
 GET http://localhost:3000/PokeInfo/6332573f1cd35c48ca5beecd
 
 ###
-POST http://localhost:3000/PokeInfo
+POST http://localhost:3000/favorites
 Content-Type: application/json
 
 {

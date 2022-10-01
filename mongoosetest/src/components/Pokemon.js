@@ -3,6 +3,12 @@ import SearchBar from './SearchBar';
 import Card from 'react-bootstrap/Card';
 import starSelect from '../Images/star.png'
 import star from '../Images/starselect.png'
+import axios from 'axios'
+
+
+const api = axios.create({
+    baseURL: `http://localhost:3000/favorites`
+})
 export default function Pokemon() {
     const [search, setSearch] = useState('Pikachu')
     const [BackendData, setBackendData] = useState({})
@@ -47,7 +53,11 @@ export default function Pokemon() {
         }
         fetchImage()
     }, [number])
+    let addToFavorites = async () => {
+        let res = await api.post('/', { name: 'devin', id: 4 })
+        console.log('res')
 
+    }
     const handleSearch = (e, term) => {
         e.preventDefault()
         setSearch(term)
@@ -55,6 +65,8 @@ export default function Pokemon() {
     const handlePost = () => {
         if (!isSelected) {
             setIsSelected(true)
+
+            addToFavorites()
         } else if (isSelected) {
             setIsSelected(false)
         }
