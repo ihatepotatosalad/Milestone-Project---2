@@ -24,7 +24,11 @@ router.get('/:id', getPokemon, async (req, res) => {
 router.post('/', async (req, res) => {
     const favorite = new Favorites({
         name: req.body.name,
-        id: req.body.id
+        id: req.body.id,
+        weight: req.body.weight,
+        height: req.body.height,
+        type1: req.body.type1,
+        type2: req.body.type2
 
     })
     try {

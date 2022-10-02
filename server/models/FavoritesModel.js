@@ -3,13 +3,25 @@ const mongoose = require('mongoose')
 
 const FavoriteSchema = new mongoose.Schema({
     name: {
-        type: String,
+        type: String
 
     },
     id: {
-        type: Number,
+        type: Number
 
     },
+    weight: {
+        type: Number
+    },
+    height: {
+        type: Number
+    },
+    type1: {
+        type: String
+    },
+    type2: {
+        type: String
+    }
 
 
 

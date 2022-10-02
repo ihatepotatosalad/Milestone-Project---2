@@ -54,7 +54,7 @@ export default function Pokemon() {
         fetchImage()
     }, [number])
     let addToFavorites = async () => {
-        let res = await api.post('/', { name: 'devin', id: 4 })
+        let res = await api.post('/', { name: BackendData.name, id: BackendData.pokedex_number, weight: BackendData.weight_kg, height: BackendData.height_m, type1: BackendData.type1, type2: BackendData.type2 ? BackendData.type2 : 'None' })
         console.log('res')
 
     }
@@ -88,7 +88,7 @@ export default function Pokemon() {
 
 
                             <div>
-                                <img src={imgNum} />
+                                <img src={imgNum} height='135' position='relative' /><br />
 
                                 Height: {BackendData.height_m}<br />
                                 ID: {BackendData.pokedex_number}<br />
