@@ -21,6 +21,9 @@ const FavoriteSchema = new mongoose.Schema({
     },
     type2: {
         type: String
+    },
+    imgFile: {
+        type: String
     }
 
 

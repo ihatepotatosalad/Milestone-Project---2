@@ -28,8 +28,8 @@ router.post('/', async (req, res) => {
         weight: req.body.weight,
         height: req.body.height,
         type1: req.body.type1,
-        type2: req.body.type2
-
+        type2: req.body.type2,
+        imgFile: req.body.imgFile
     })
     try {
         const newFavorite = await favorite.save()

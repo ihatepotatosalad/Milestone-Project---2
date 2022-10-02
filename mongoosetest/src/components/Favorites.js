@@ -4,18 +4,21 @@ import starSelect from '../Images/star.png'
 import star from '../Images/starselect.png'
 import axios from 'axios'
 import Pokemon from "./Pokemon";
+
 const api = axios.create({
     baseURL: `http://localhost:3000/favorites`
 })
 export default function Favorites() {
     const [data, setData] = useState([{}])
     const [isSelected, setIsSelected] = useState(false)
+    const [imgString, setImgString] = useState('')
     useState(() => {
 
         api.get('/').then(res => {
             if (res.data) {
                 console.log(res.data)
                 setData(res.data)
+
             }
 
         })
@@ -23,19 +26,19 @@ export default function Favorites() {
     }, [])
 
 
-
-
     return (
         <div>
             <h1>Favorites</h1>
-            {data.map((poki) =>
-                <Card style={{ width: '18rem', border: '1px solid red' }}>
-                    {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
+            {data.map((poki, i) =>
+
+                <Card style={{ width: '18rem', border: '1px solid red' }} key={i}>
+
                     <Card.Body>
                         <Card.Title>{poki.name}</Card.Title>
                         <Card.Text>
                             <div>
-                                {/* <img src={imgNum} height='135' position='relative' /><br /> */}
+                                {/* {import(`../Images/pokemonImg/pokemon_jpg/pokemon_jpg/${poki.id}.jpg`).default}
+                                <img src={poki.imgFile} alt={poki.name} height='135' position='relative' /><br /> */}
 
                                 Height: {poki.height}<br />
                                 ID: {poki.id}<br />

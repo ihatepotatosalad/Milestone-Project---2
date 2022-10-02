@@ -54,7 +54,7 @@ export default function Pokemon() {
         fetchImage()
     }, [number])
     let addToFavorites = async () => {
-        let res = await api.post('/', { name: BackendData.name, id: BackendData.pokedex_number, weight: BackendData.weight_kg, height: BackendData.height_m, type1: BackendData.type1, type2: BackendData.type2 ? BackendData.type2 : 'None' })
+        let res = await api.post('/', { name: BackendData.name, id: BackendData.pokedex_number, weight: BackendData.weight_kg, height: BackendData.height_m, type1: BackendData.type1, type2: BackendData.type2 ? BackendData.type2 : 'None', imgFile: `../Images/pokemonImg/pokemon_jpg/pokemon_jpg/${number}.jpg` })
         console.log('res')
 
     }
