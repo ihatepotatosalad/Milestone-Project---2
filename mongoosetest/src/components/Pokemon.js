@@ -74,10 +74,10 @@ export default function Pokemon() {
     }
     return (
         <div className="App">
-            <h1>hello world</h1>
+            <h1>Pokemon</h1>
             <SearchBar handleSearch={handleSearch} />
             <Card style={{ width: '18rem', border: '1px solid red' }}>
-                {isSelected ? <img src={star} height="50" onClick={handlePost} /> : <img src={starSelect} height="50" onClick={handlePost} />}
+                {isSelected ? <img src={star} height="50" width='50' onClick={handlePost} /> : <img src={starSelect} height="50" width='50' onClick={handlePost} />}
                 <Card.Body>
                     <Card.Title>{search}</Card.Title>
 

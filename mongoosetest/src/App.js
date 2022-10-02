@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom'
 import Favorites from './components/Favorites';
 import Home from './components/Home';
 import Pokemon from './components/Pokemon';
+import pokeBall from './Images/pokeball.png'
 function App() {
 
 
@@ -15,21 +16,23 @@ function App() {
 
 
   return (
-    <Router>
-      <div className='navBar'>
-        <ul>
-          <li>
-            <Link to='/'>Home</Link>
 
-          </li>
-          <li>
-            <Link to='/Favorites'>Favorites</Link>
-          </li>
-          <li>
-            <Link to='/Pokemon'>Pokemon</Link>
-          </li>
-        </ul>
-      </div>
+    <Router>
+
+
+      <Navbar bg='light' expand="lg">
+        <Container>
+          <Navbar.Brand href="/" >{<img height='50' src={pokeBall} />}</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="/" >Home</Nav.Link>
+              <Nav.Link href="/Pokemon" >Pokemon</Nav.Link>
+              <Nav.Link href="/Favorites" >Favorites</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
       <div>
         <Routes>
           <Route path='/' element={<Home />} />
