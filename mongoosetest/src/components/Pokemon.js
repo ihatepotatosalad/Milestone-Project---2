@@ -27,6 +27,7 @@ export default function Pokemon() {
                     if (BackendData.pokedex_number) {
                         console.log(data.pokedex_number)
                         setNumber(data.pokedex_number)
+                        setIsSelected(false)
                     }
 
                 }
