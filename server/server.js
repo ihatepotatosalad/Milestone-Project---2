@@ -22,4 +22,4 @@ app.use('/PokeInfo', pokeInfoRouter)
 const favoritesRouter = require('./routes/Favorites')
 app.use('/Favorites', favoritesRouter)
 
-app.listen(3000, () => console.log('server Started'))
+app.listen(process.env.PORT, () => console.log('server Started'))
