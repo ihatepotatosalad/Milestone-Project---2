@@ -9,7 +9,8 @@ const cors = require("cors")
 const mongoose = require('mongoose')
 app.use(
     cors({
-        origin: "http://localhost:3001"
+        origin: "http://localhost:3001",
+        origin: 'https://pokemonapiproject.herokuapp.com/',
     }))
 
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
