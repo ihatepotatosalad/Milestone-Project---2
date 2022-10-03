@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmongoosetest=self.webpackChunkmongoosetest||[]).push([[72045],{72045:function(s,e,t){s.exports=t.p+"static/media/412-sandy.3d25a4860cb3abda988b.jpg"}}]);

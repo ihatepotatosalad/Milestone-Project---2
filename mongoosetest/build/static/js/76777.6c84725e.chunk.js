@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmongoosetest=self.webpackChunkmongoosetest||[]).push([[76777],{76777:function(e,s,t){e.exports=t.p+"static/media/586-winter.ef68206935172afd3a02.jpg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmongoosetest=self.webpackChunkmongoosetest||[]).push([[60821],{60821:function(e,s,t){e.exports=t.p+"static/media/25-pop-star.0a2915d4c196e47e0a0d.jpg"}}]);

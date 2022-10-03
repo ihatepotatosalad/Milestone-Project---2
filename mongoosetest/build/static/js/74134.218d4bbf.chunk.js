@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmongoosetest=self.webpackChunkmongoosetest||[]).push([[74134],{74134:function(e,t,s){e.exports=s.p+"static/media/648-pirouette.6bf72a8a13eca5678ff2.jpg"}}]);

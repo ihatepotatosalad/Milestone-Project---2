@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmongoosetest=self.webpackChunkmongoosetest||[]).push([[93314],{93314:function(e,s,t){e.exports=t.p+"static/media/386-defense.d4d52c7f617c2bae51a0.jpg"}}]);

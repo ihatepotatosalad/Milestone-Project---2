@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmongoosetest=self.webpackChunkmongoosetest||[]).push([[61274],{61274:function(e,s,t){e.exports=t.p+"static/media/681-blade.34c09bcd3c6b1265d50e.jpg"}}]);

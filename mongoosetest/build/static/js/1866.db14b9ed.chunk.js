@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmongoosetest=self.webpackChunkmongoosetest||[]).push([[1866],{1866:function(e,s,t){e.exports=t.p+"static/media/479-heat.6fd76556eda68abb4e31.jpg"}}]);

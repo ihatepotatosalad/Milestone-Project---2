@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmongoosetest=self.webpackChunkmongoosetest||[]).push([[68097],{68097:function(e,s,t){e.exports=t.p+"static/media/442.61b1b3c40d7780b21189.jpg"}}]);

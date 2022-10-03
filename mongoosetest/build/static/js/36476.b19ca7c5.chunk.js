@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmongoosetest=self.webpackChunkmongoosetest||[]).push([[36476],{36476:function(e,s,t){e.exports=t.p+"static/media/550-red-striped.4b6fdeb640c0c090a195.jpg"}}]);

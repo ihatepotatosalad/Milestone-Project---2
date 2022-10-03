@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmongoosetest=self.webpackChunkmongoosetest||[]).push([[5018],{5018:function(e,s,t){e.exports=t.p+"static/media/681-shield.0bd3179668eaf6e9b799.jpg"}}]);

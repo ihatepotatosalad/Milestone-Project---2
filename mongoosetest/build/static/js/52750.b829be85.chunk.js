@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmongoosetest=self.webpackChunkmongoosetest||[]).push([[52750],{52750:function(s,e,t){s.exports=t.p+"static/media/492-sky.7ddf37a925d1b7999683.jpg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmongoosetest=self.webpackChunkmongoosetest||[]).push([[62102],{62102:function(e,s,t){e.exports=t.p+"static/media/382-primal.1cfc3af94bbb147c3342.jpg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmongoosetest=self.webpackChunkmongoosetest||[]).push([[47622],{47622:function(e,t,s){e.exports=s.p+"static/media/386-attack.4130ea44603d22afd16a.jpg"}}]);
