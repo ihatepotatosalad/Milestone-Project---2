@@ -7,7 +7,8 @@ const cors = require("cors")
 const mongoose = require('mongoose')
 app.use(
     cors({
-        origin: "http://localhost:3001"
+        origin: "http://localhost:3001",
+        origin: 'https://pokemonapiproject.herokuapp.com/',
     }))
 
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -23,8 +24,8 @@ app.use('/PokeInfo', pokeInfoRouter)
 const favoritesRouter = require('./routes/Favorites')
 app.use('/Favorites', favoritesRouter)
 
-app.get('/', function (req, res) {
-    res.send('working')
-})
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('mongoosetest/build'))
+}
 
 app.listen(process.env.PORT, () => console.log('server Started'))

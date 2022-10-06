@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "cd mongoosetest && npm run build",
+    "install-client": "cd mongoosetest && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
     "devStart": "nodemon server.js"
   },
   "author": "",
